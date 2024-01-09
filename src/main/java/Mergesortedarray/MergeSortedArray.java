@@ -1,7 +1,6 @@
 package Mergesortedarray;
 
 import java.security.InvalidParameterException;
-import java.util.Arrays;
 
 public class MergeSortedArray {
 
@@ -19,7 +18,8 @@ public class MergeSortedArray {
             throw new InvalidParameterException("First array must have space for elements of the second array!");
         }
 
-        int i = m-1 ,j = n-1;
+        int i = m-1;
+        int j = n-1;
         int k = m + n -1;
         // take advantage of their sorted order and compare last elements - gradually move them to the end of the list.
         while(i >= 0 && j >= 0) {

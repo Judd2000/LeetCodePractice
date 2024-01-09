@@ -2,6 +2,8 @@ package Removeduplicatestwo;
 
 public class RemoveDuplicatesTwo {
 
+    private RemoveDuplicatesTwo() {}
+
     public static int removeDuplicates(int[] nums) {
         //        Input: nums = [1,1,1,2,2,3]
         //        Output: 5, nums = [1,1,2,2,3,_]
