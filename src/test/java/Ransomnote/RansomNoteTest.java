@@ -24,7 +24,7 @@ public class RansomNoteTest {
         result = RansomNote.canConstruct(ransomNote, magazine);
         assertTrue(result);
 
-//        One letter short
+//        One letter short - missing "t".
 //        Input: "they know where I am", magazine = "ma i erehw wonkk yehh wha zjkw"
 //        Output: false
         ransomNote = "they know where I am";
