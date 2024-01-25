@@ -30,4 +30,27 @@ public class RansomNote {
         }
         return true;
     }
+
+    public static boolean canConstructArrayEdition(String ransomNote, String magazine) {
+        int[] alphaOccurances = new int[26];
+        // array index is current character toLowerCase - 'a'
+        for (int i = 0; i < magazine.length(); i++) {
+            char curChar = Character.toLowerCase(magazine.charAt(i));
+            if (curChar == ' ' || curChar == '\n') {
+                continue;
+            }
+            alphaOccurances[curChar-'a']++;
+        }
+        for (int i = 0; i < ransomNote.length(); i++) {
+            char curChar = Character.toLowerCase(ransomNote.charAt(i));
+            if (curChar == ' ' || curChar == '\n') {
+                continue;
+            }
+            if (alphaOccurances[curChar-'a'] == 0) {
+                return false;
+            }
+            alphaOccurances[curChar-'a']--;
+        }
+        return true;
+    }
 }
