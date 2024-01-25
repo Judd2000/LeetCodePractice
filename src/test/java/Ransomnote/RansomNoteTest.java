@@ -15,6 +15,7 @@ public class RansomNoteTest {
 
         boolean result = RansomNote.canConstruct(ransomNote, magazine);
         assertTrue(result);
+        assertTrue(RansomNote.canConstructArrayEdition(ransomNote, magazine));
 
 //        Input: ransomNote = "help me please", magazine = "Per use of the ephemeral seal"
 //        Output: true
@@ -23,6 +24,7 @@ public class RansomNoteTest {
 
         result = RansomNote.canConstruct(ransomNote, magazine);
         assertTrue(result);
+        assertTrue(RansomNote.canConstructArrayEdition(ransomNote, magazine));
 
 //        One letter short - missing "t".
 //        Input: "they know where I am", magazine = "ma i erehw wonkk yehh wha zjkw"
@@ -32,5 +34,12 @@ public class RansomNoteTest {
 
         result = RansomNote.canConstruct(ransomNote, magazine);
         assertFalse(result);
+        assertFalse(RansomNote.canConstructArrayEdition(ransomNote, magazine));
+
+        ransomNote = "abc abc abc def def ghi ghi jkl jkl";
+        magazine = "cba cba fed fed ihg hg lkj lkj";
+
+        assertFalse(RansomNote.canConstruct(ransomNote, magazine));
+        assertFalse(RansomNote.canConstructArrayEdition(ransomNote, magazine));
     }
 }
