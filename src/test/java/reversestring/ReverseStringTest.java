@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ReverseStringTest {
     ReverseString test;
@@ -28,5 +29,23 @@ public class ReverseStringTest {
         expected = new char[]{'h', 'a', 'n', 'n', 'a', 'H'};
         this.test.reverseString(input);
         assertArrayEquals(input, expected);
+    }
+
+    @Test
+    void testReverseStringII() {
+        // Input: s = "abcdefg", k = 2
+        // Output: "bacdfeg"
+        String input = "abcdefg";
+        int k = 2;
+        String expected = "bacdfeg";
+
+        assertEquals(expected, this.test.reverseStringII(input, k));
+
+        // Input: s = "abcd", k = 2
+        // Output: "bacd"
+        input = "abcd";
+        expected = "bacd";
+
+        assertEquals(expected, this.test.reverseStringII(input, k));
     }
 }
