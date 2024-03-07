@@ -1,5 +1,7 @@
 package smallestnumcoins;
 
+import java.util.Arrays;
+
 public class CoinCount {
 
     // Can be easily expanded to say which coins with a hash map.
@@ -26,5 +28,25 @@ public class CoinCount {
             return -1;
         }
         return (int) minSoFar[amount];
+    }
+
+    // DP solution - 2d grid - coin size x amount
+    public int numCoinCombinations(int amount, int[] coins) {
+//        Return the number of combinations that make up that amount.
+        // unbounded knapsack!!!
+        // bottom - up - below us + (coin amount) to the right of us.
+        int[][] memo = new int[amount + 1][coins.length + 1];
+        // initialize the left side - all zeros
+        Arrays.fill(memo[0], 1);
+        for (int i = 1; i < amount + 1; i++) {
+            for (int j = coins.length - 1; j >= 0; j--) {
+                memo[i][j] = memo[i][j + 1];
+                if (i - coins[j] >= 0) {
+                    // there should be a solution down there
+                    memo[i][j] += memo[i - coins[j]][j];
+                }
+            }
+        }
+        return memo[amount][0];
     }
 }

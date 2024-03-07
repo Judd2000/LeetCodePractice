@@ -28,4 +28,11 @@ class CoinCountTest {
 
         assertEquals(expectedNumCoins, test.minCoins(possibleCoins, amount));
     }
+
+    @Test
+    void testNumCoinCombinations() {
+        // Input: amount = 5, coins = [1,2,5]
+        // Output: 4
+        assertEquals(4,   test.numCoinCombinations(5, new int[]{1,2,5}));
+    }
 }
