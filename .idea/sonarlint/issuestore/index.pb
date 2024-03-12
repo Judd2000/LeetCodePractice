@@ -53,3 +53,7 @@ _
 .src/main/java/possibledicerolls/DiceRolls.java,8\e\8eb2277c6924f33f9c6746f66f9734062fa89492
 b
 2src/test/java/possibledicerolls/DiceRollsTest.java,2\1\21f2efb5e9b59165f349a6e0fa467ff6a5a550d9
+`
+0src/main/java/combinationsum/CombinationSum.java,9\e\9eff585d2250b3c2a89b66a956b5bed763eb577a
+d
+4src/test/java/combinationsum/CombinationSumTest.java,a\9\a9a740ed141d41e063892aceac8eeb99a5916a35
