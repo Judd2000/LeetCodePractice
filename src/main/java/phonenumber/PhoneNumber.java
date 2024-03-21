@@ -16,6 +16,7 @@ public class PhoneNumber {
         return combinations;
     }
     public void calculate(String digits, int index, StringBuilder combo, List<String> combinations) {
+        // Base case - we have tried a full set of combinations and can add this to the list.
         if (index == digits.length()) {
             combinations.add(combo.toString());
             return ;
