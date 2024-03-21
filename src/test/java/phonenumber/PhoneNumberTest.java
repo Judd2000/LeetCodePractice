@@ -36,5 +36,7 @@ public class PhoneNumberTest {
         input = "";
         expected = new ArrayList<>();
         assertEquals(expected, test.letterCombinations(input));
+
+        test.letterCombinations("360");
     }
 }
